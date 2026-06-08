@@ -624,6 +624,73 @@
     font-size: 11px; color: var(--muted);
   }
 
+  /* ── Gemeinde-Fakten (Infos → Kommune) ── */
+  .ort-facts { background:#fff; border-radius:14px; margin:0 16px 12px; padding:14px 16px 16px; box-shadow:0 1px 3px rgba(0,0,0,0.06); }
+  .ort-facts-head { margin-bottom:12px; }
+  .ort-facts-name { font-size:18px; font-weight:700; color:var(--navy); }
+  .ort-facts-sub { font-size:11.5px; color:var(--muted); margin-top:1px; }
+  .ort-facts-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin-bottom:14px; }
+  .ort-stat { background:var(--mint-soft); border-radius:10px; padding:9px 3px; text-align:center; }
+  .ort-stat-val { font-size:13px; font-weight:700; color:var(--navy); line-height:1.1; white-space:nowrap; }
+  .ort-stat-lbl { font-size:9px; color:var(--muted); margin-top:3px; font-weight:600; }
+  .ort-facts-list { display:flex; flex-direction:column; gap:9px; }
+  .ort-fact { display:flex; gap:8px; align-items:flex-start; font-size:12.5px; color:#2a2a2a; line-height:1.35; }
+  .ort-fact span { flex-shrink:0; }
+
+  /* ── Funkzentrale „Alle": kuratierte Kanal-Übersicht ── */
+  .curated-feed { padding:4px 0 0; }
+  .curated-feed .channel-block { padding:0 16px 4px; }
+  .curated-feed .channel-head { display:flex; align-items:center; justify-content:space-between; padding:14px 4px 8px; }
+  .curated-feed .channel-head-left { display:flex; align-items:center; gap:9px; }
+  .curated-feed .channel-name { font-size:16px; font-weight:700; color:var(--navy); letter-spacing:0.2px; }
+  .curated-feed .channel-count { font-size:11px; font-weight:600; color:var(--muted); margin-left:2px; }
+  .curated-feed .channel-all { background:none; border:none; cursor:pointer; font-family:inherit; font-size:12.5px; font-weight:600; color:var(--navy); display:flex; align-items:center; gap:3px; padding:4px 2px; }
+  .curated-feed .channel-all svg { width:14px; height:14px; }
+  /* News-Teaser (Briefkopf-Stil) */
+  .curated-feed .news-teaser { background:#fff; border-radius:13px; margin-bottom:8px; padding:12px 14px; cursor:pointer; box-shadow:0 1px 3px rgba(0,0,0,0.05); display:flex; gap:11px; align-items:flex-start; }
+  .curated-feed .news-teaser.amtlich { background:#fff8ec; }
+  .curated-feed .nt-avatar { width:34px; height:34px; border-radius:8px; flex-shrink:0; background:linear-gradient(135deg,#6ac8b8,var(--navy)); }
+  .curated-feed .nt-avatar.amt { display:flex; align-items:center; justify-content:center; background:var(--navy); }
+  .curated-feed .nt-avatar.amt svg { width:18px; height:18px; color:#fff; }
+  .curated-feed .nt-avatar.medien { background:linear-gradient(135deg,#e8966a,#c8786a); }
+  .curated-feed .nt-body { flex:1; min-width:0; }
+  .curated-feed .nt-meta { display:flex; align-items:center; gap:6px; margin-bottom:3px; flex-wrap:wrap; }
+  .curated-feed .nt-sender { font-size:12px; font-weight:600; color:var(--ink); }
+  .curated-feed .nt-time { font-size:10.5px; color:#9a9a9a; }
+  .curated-feed .nt-tag { font-size:9px; font-weight:700; padding:2px 6px; border-radius:4px; text-transform:uppercase; letter-spacing:0.3px; }
+  .curated-feed .nt-tag.tag-amtlich { background:var(--navy); color:#fff; }
+  .curated-feed .nt-tag.tag-medien { background:#e8966a; color:#fff; }
+  .curated-feed .nt-tag.tag-blaulicht { background:#d65a5a; color:#fff; }
+  .curated-feed .nt-text { font-size:13.5px; color:#2a2a2a; line-height:1.4; font-weight:500; }
+  /* Plausch-Teaser (Sprechblasen) */
+  .curated-feed .tratsch-teaser { background:#f6f0fb; border-radius:13px; margin-bottom:8px; padding:11px 14px; cursor:pointer; border:1px solid #ece2f5; display:flex; gap:10px; align-items:flex-start; }
+  .curated-feed .tt-avatar { width:30px; height:30px; border-radius:50%; flex-shrink:0; background:linear-gradient(135deg,#b88ad8,#8a6aa8); }
+  .curated-feed .tt-body { flex:1; min-width:0; }
+  .curated-feed .tt-meta { display:flex; align-items:center; gap:6px; margin-bottom:2px; }
+  .curated-feed .tt-name { font-size:12px; font-weight:600; color:var(--ink); }
+  .curated-feed .tt-time { font-size:10.5px; color:#9a9a9a; }
+  .curated-feed .tt-text { font-size:13.5px; color:#2a2a2a; line-height:1.4; }
+  .curated-feed .tt-replies { font-size:11px; color:#8a6aa8; font-weight:600; margin-top:5px; display:flex; align-items:center; gap:4px; }
+  .curated-feed .tt-replies svg { width:13px; height:13px; }
+  /* Markt-Teaser (Produktkacheln) */
+  .curated-feed .markt-row { display:flex; gap:10px; overflow-x:auto; padding:2px 0 4px; -webkit-overflow-scrolling:touch; }
+  .curated-feed .markt-row::-webkit-scrollbar { height:0; }
+  .curated-feed .markt-card { flex:0 0 132px; background:#fff; border-radius:13px; overflow:hidden; cursor:pointer; box-shadow:0 1px 3px rgba(0,0,0,0.05); }
+  .curated-feed .mc-img { height:92px; background:linear-gradient(135deg,#a8d8cc,#78a8a0); display:flex; align-items:center; justify-content:center; color:#4a6a62; font-size:11px; }
+  .curated-feed .mc-body { padding:8px 10px 10px; }
+  .curated-feed .mc-price { font-size:14px; font-weight:700; color:var(--navy); }
+  .curated-feed .mc-title { font-size:12px; color:#2a2a2a; line-height:1.3; margin-top:2px; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+  /* Events-Teaser (Datumsblock) */
+  .curated-feed .ch-event-teaser { background:#fff; border-radius:13px; margin-bottom:8px; padding:11px 13px; cursor:pointer; box-shadow:0 1px 3px rgba(0,0,0,0.05); display:flex; gap:12px; align-items:center; }
+  .curated-feed .ev-date { flex:0 0 48px; text-align:center; background:#fdf1e9; border-radius:10px; padding:7px 4px; }
+  .curated-feed .ev-day { font-size:19px; font-weight:700; color:var(--orange); line-height:1; }
+  .curated-feed .ev-mon { font-size:10px; font-weight:600; color:var(--orange); text-transform:uppercase; }
+  .curated-feed .ev-body { flex:1; min-width:0; }
+  .curated-feed .ev-title { font-size:13.5px; font-weight:700; color:var(--ink); line-height:1.3; }
+  .curated-feed .ev-meta { font-size:11.5px; color:var(--muted); margin-top:3px; display:flex; align-items:center; gap:4px; }
+  .curated-feed .ev-meta svg { width:12px; height:12px; }
+  .curated-feed .channel-divider { height:1px; background:rgba(26,58,92,0.10); margin:8px 4px 0; }
+
   /* ── Profil ── */
   .profile-cover {
     height: 100px;
@@ -1356,7 +1423,7 @@
             <div class="primary-tab-strip">
               <button class="primary-tab active" data-section="leben" onclick="selectPrimary(this,'leben')">Funkzentrale</button>
               <button class="primary-tab" data-section="gruppen" onclick="selectPrimary(this,'gruppen')">Chats</button>
-              <button class="primary-tab" data-section="infos" onclick="selectPrimary(this,'infos')">Gemeindeinfos</button>
+              <button class="primary-tab" data-section="infos" onclick="selectPrimary(this,'infos')">Infos</button>
             </div>
           </div>
 
@@ -1395,74 +1462,116 @@
 
               <!-- ── Alle (Standard) ── -->
               <div class="feed-panel" data-cat="leben-alle">
-                <div class="post-card amtlich" onclick="showToast('Beitrag öffnen')">
-                  <div class="post-body">
-                    <div class="post-meta">
-                      <div class="post-author"><div class="avatar"></div><div class="author-info"><div class="name">Gemeinde Ismaning</div><div class="time">vor 14 Std.</div></div></div>
-                      <span class="post-tag tag-amtlich">Amtlich</span>
+                <div class="curated-feed">
+
+                <!-- NEWS -->
+                <div class="channel-block">
+                  <div class="channel-head">
+                    <div class="channel-head-left">
+                      <span class="channel-name">News</span>
+                      <span class="channel-count">3 neu</span>
                     </div>
-                    <div class="post-text">Straßensperrung Klenzestraße wegen Kanalbauarbeiten von Mo – Fr. Umleitung über Schulstraße ausgeschildert.</div>
+                    <button class="channel-all" onclick="jumpToCat(this,'leben-news')">Alle ansehen
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="9 18 15 12 9 6"/></svg>
+                    </button>
                   </div>
-                  <div class="post-actions">
-                    <button onclick="event.stopPropagation();showToast('❤️ Gefällt mir')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>24</button>
-                    <button onclick="event.stopPropagation();showToast('Kommentare')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>8</button>
-                    <button onclick="event.stopPropagation();showToast('Teilen')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/></svg></button>
+                  <div class="news-teaser amtlich" onclick="showToast('Beitrag öffnen')">
+                    <div class="nt-avatar amt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></div>
+                    <div class="nt-body">
+                      <div class="nt-meta"><span class="nt-sender">Gemeinde Ismaning</span><span class="nt-tag tag-amtlich">Amtlich</span><span class="nt-time">vor 14 Std.</span></div>
+                      <div class="nt-text">Straßensperrung Klenzestraße wegen Kanalbau – Umleitung über Schulstraße ausgeschildert.</div>
+                    </div>
+                  </div>
+                  <div class="news-teaser" onclick="showToast('Beitrag öffnen')">
+                    <div class="nt-avatar medien"></div>
+                    <div class="nt-body">
+                      <div class="nt-meta"><span class="nt-sender">Antenne Bayern</span><span class="nt-tag tag-medien">Medien</span><span class="nt-time">vor 3 Std.</span></div>
+                      <div class="nt-text">Wetterwarnung: Am Wochenende Gewitter im Münchner Umland erwartet.</div>
+                    </div>
+                  </div>
+                  <div class="news-teaser" onclick="showToast('Beitrag öffnen')">
+                    <div class="nt-avatar amt" style="background:#d65a5a;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7v6c0 5 4 9 10 9s10-4 10-9V7L12 2z"/></svg></div>
+                    <div class="nt-body">
+                      <div class="nt-meta"><span class="nt-sender">Freiwillige Feuerwehr</span><span class="nt-tag tag-blaulicht">Blaulicht</span><span class="nt-time">vor 1 Tag</span></div>
+                      <div class="nt-text">Einsatz B471: Verkehr wieder frei. Danke an alle Helfer vor Ort.</div>
+                    </div>
                   </div>
                 </div>
-                <div class="post-card" onclick="showToast('Beitrag öffnen')">
-                  <div class="post-image">Bild</div>
-                  <div class="post-body">
-                    <div class="post-meta">
-                      <div class="post-author"><div class="avatar" style="background:linear-gradient(135deg,#e8966a,#c8786a);"></div><div class="author-info"><div class="name">Freiwillige Feuerwehr</div><div class="time">vor 23 Std.</div></div></div>
-                      <span class="post-tag tag-verein">Verein</span>
+
+                <div class="channel-divider"></div>
+
+                <!-- PLAUSCH -->
+                <div class="channel-block">
+                  <div class="channel-head">
+                    <div class="channel-head-left">
+                      <span class="channel-name">Plausch</span>
+                      <span class="channel-count">5 neu</span>
                     </div>
-                    <div class="post-text">Nachwuchs für die Jugendfeuerwehr gesucht! Infoabend am Donnerstag, 19 Uhr im Gerätehaus.</div>
+                    <button class="channel-all" onclick="jumpToCat(this,'leben-plausch')">Alle ansehen
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="9 18 15 12 9 6"/></svg>
+                    </button>
                   </div>
-                  <div class="post-actions">
-                    <button onclick="event.stopPropagation();showToast('❤️ Gefällt mir')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>52</button>
-                    <button onclick="event.stopPropagation();showToast('Kommentare')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>12</button>
-                    <button onclick="event.stopPropagation();showToast('Teilen')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/></svg></button>
+                  <div class="tratsch-teaser" onclick="showToast('Beitrag öffnen')">
+                    <div class="tt-avatar"></div>
+                    <div class="tt-body">
+                      <div class="tt-meta"><span class="tt-name">Maria K.</span><span class="tt-time">vor 2 Std.</span></div>
+                      <div class="tt-text">Kennt jemand einen guten Fahrradladen in der Nähe? Brauche eine neue Kette.</div>
+                      <div class="tt-replies"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>11 Antworten</div>
+                    </div>
+                  </div>
+                  <div class="tratsch-teaser" onclick="showToast('Beitrag öffnen')">
+                    <div class="tt-avatar" style="background:linear-gradient(135deg,#8ac8d8,#6a98b8);"></div>
+                    <div class="tt-body">
+                      <div class="tt-meta"><span class="tt-name">Josef H.</span><span class="tt-time">vor 5 Std.</span></div>
+                      <div class="tt-text">Wer war auch beim Frühschoppen am Sonntag? War richtig schön! 🍺</div>
+                      <div class="tt-replies"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>4 Antworten</div>
+                    </div>
                   </div>
                 </div>
-                <div class="post-card" onclick="showToast('Beitrag öffnen')">
-                  <div class="post-body">
-                    <div class="post-meta">
-                      <div class="post-author"><div class="avatar" style="background:linear-gradient(135deg,#b88ad8,#8a6aa8);"></div><div class="author-info"><div class="name">Maria K.</div><div class="time">vor 2 Std.</div></div></div>
+
+                <div class="channel-divider"></div>
+
+                <!-- MARKT -->
+                <div class="channel-block">
+                  <div class="channel-head">
+                    <div class="channel-head-left">
+                      <span class="channel-name">Markt</span>
+                      <span class="channel-count">8 neu</span>
                     </div>
-                    <div class="post-text">Kennt jemand einen guten Fahrradladen hier in der Nähe? Brauche eine neue Kette.</div>
+                    <button class="channel-all" onclick="jumpToCat(this,'leben-markt')">Alle ansehen
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="9 18 15 12 9 6"/></svg>
+                    </button>
                   </div>
-                  <div class="post-actions">
-                    <button onclick="event.stopPropagation();showToast('❤️ Gefällt mir')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>6</button>
-                    <button onclick="event.stopPropagation();showToast('Kommentare')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>11</button>
+                  <div class="markt-row">
+                    <div class="markt-card" onclick="showToast('Anzeige öffnen')"><div class="mc-img">Foto</div><div class="mc-body"><div class="mc-price">45 €</div><div class="mc-title">Kinderfahrrad 20 Zoll, gut erhalten</div></div></div>
+                    <div class="markt-card" onclick="showToast('Anzeige öffnen')"><div class="mc-img" style="background:linear-gradient(135deg,#d8c8a8,#a89878);">Foto</div><div class="mc-body"><div class="mc-price">120 €</div><div class="mc-title">Eichen-Esstisch, ausziehbar</div></div></div>
+                    <div class="markt-card" onclick="showToast('Anzeige öffnen')"><div class="mc-img" style="background:linear-gradient(135deg,#c8b8d8,#9888a8);">Foto</div><div class="mc-body"><div class="mc-price">Verschenken</div><div class="mc-title">Umzugskartons, ca. 20 Stück</div></div></div>
                   </div>
                 </div>
-                <div class="post-card" onclick="showToast('Anzeige öffnen')">
-                  <div class="post-image" style="background:linear-gradient(135deg,#a8c8d8,#7898a8);">Foto</div>
-                  <div class="post-body">
-                    <div class="post-meta">
-                      <div class="post-author"><div class="avatar" style="background:linear-gradient(135deg,#6ac8b8,#3a7a8a);"></div><div class="author-info"><div class="name">Lukas M.</div><div class="time">vor 8 Std.</div></div></div>
-                      <span class="post-tag tag-event">Zu verschenken</span>
+
+                <div class="channel-divider"></div>
+
+                <!-- EVENTS -->
+                <div class="channel-block">
+                  <div class="channel-head">
+                    <div class="channel-head-left">
+                      <span class="channel-name">Events</span>
+                      <span class="channel-count">demnächst</span>
                     </div>
-                    <div class="post-text">Sofa, 3-Sitzer, grau, leicht gebraucht — zu verschenken. Selbstabholung.</div>
+                    <button class="channel-all" onclick="jumpToCat(this,'leben-events')">Alle ansehen
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="9 18 15 12 9 6"/></svg>
+                    </button>
                   </div>
-                  <div class="post-actions">
-                    <button onclick="event.stopPropagation();showToast('❤️ Gefällt mir')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>19</button>
-                    <button onclick="event.stopPropagation();showToast('Kommentare')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>8</button>
+                  <div class="ch-event-teaser" onclick="showToast('Event öffnen')">
+                    <div class="ev-date"><div class="ev-day">14</div><div class="ev-mon">Jun</div></div>
+                    <div class="ev-body"><div class="ev-title">Sommerfest am Bürgerhaus</div><div class="ev-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>15:00 Uhr · Marktplatz</div></div>
+                  </div>
+                  <div class="ch-event-teaser" onclick="showToast('Event öffnen')">
+                    <div class="ev-date"><div class="ev-day">19</div><div class="ev-mon">Jun</div></div>
+                    <div class="ev-body"><div class="ev-title">Infoabend Jugendfeuerwehr</div><div class="ev-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>19:00 Uhr · Gerätehaus</div></div>
                   </div>
                 </div>
-                <div class="post-card" onclick="showToast('Event öffnen')">
-                  <div class="post-image" style="background:linear-gradient(135deg,#d8b88a,#a88a6a);">Veranstaltung</div>
-                  <div class="post-body">
-                    <div class="post-meta">
-                      <div class="post-author"><div class="avatar"></div><div class="author-info"><div class="name">Kulturverein</div><div class="time">vor 3 Tagen</div></div></div>
-                      <span class="post-tag tag-event">Event</span>
-                    </div>
-                    <div class="post-text">Repair Café am 24. Mai – kaputtes mitbringen, gemeinsam reparieren. 10 – 14 Uhr Freimanner Halle.</div>
-                  </div>
-                  <div class="post-actions">
-                    <button onclick="event.stopPropagation();showToast('❤️ Gefällt mir')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>87</button>
-                    <button onclick="event.stopPropagation();showToast('Kommentare')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>23</button>
-                  </div>
+
                 </div>
               </div>
 
@@ -1826,6 +1935,24 @@
 
               <!-- ── Infos zur Kommune ── -->
               <div class="feed-panel" data-cat="infos-kommune">
+                <div class="ort-facts">
+                  <div class="ort-facts-head">
+                    <div class="ort-facts-name">Ismaning</div>
+                    <div class="ort-facts-sub">Landkreis München · Oberbayern</div>
+                  </div>
+                  <div class="ort-facts-grid">
+                    <div class="ort-stat"><div class="ort-stat-val">17.600</div><div class="ort-stat-lbl">Einwohner</div></div>
+                    <div class="ort-stat"><div class="ort-stat-val">23,8 km²</div><div class="ort-stat-lbl">Fläche</div></div>
+                    <div class="ort-stat"><div class="ort-stat-val">490 m</div><div class="ort-stat-lbl">Höhe ü. NHN</div></div>
+                    <div class="ort-stat"><div class="ort-stat-val">85737</div><div class="ort-stat-lbl">PLZ</div></div>
+                  </div>
+                  <div class="ort-facts-list">
+                    <div class="ort-fact"><span>🏛️</span> Über 1.000 Jahre im Besitz der Freisinger Fürstbischöfe</div>
+                    <div class="ort-fact"><span>🏰</span> Schloss Ismaning mit barockem Schlosspark</div>
+                    <div class="ort-fact"><span>♨️</span> Klimaneutrale Fernwärme aus eigener Geothermie</div>
+                    <div class="ort-fact"><span>🦆</span> Ismaninger Speichersee – international bedeutendes Vogelschutzgebiet</div>
+                  </div>
+                </div>
                 <div class="info-card" onclick="showToast('Rathaus öffnen')">
                   <div class="info-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg></div>
                   <div class="info-card-body">
@@ -1847,14 +1974,6 @@
                   <div class="info-card-body">
                     <div class="info-card-title">Öffnungszeiten Bürgerbüro</div>
                     <div class="info-card-meta">Mo, Di, Do 8 – 12 · Mi 14 – 18 · Fr 8 – 12</div>
-                  </div>
-                  <span class="info-card-chevron">›</span>
-                </div>
-                <div class="info-card" onclick="openMuellSheet()">
-                  <div class="info-card-icon" style="background:linear-gradient(135deg,#88a88a,#3a6a3a);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-2 14H7L5 6"/><path d="M10 11v6M14 11v6"/></svg></div>
-                  <div class="info-card-body">
-                    <div class="info-card-title">Müllabfuhr-Kalender</div>
-                    <div class="info-card-meta">Nächste Restmüll-Abholung: Do, 6. Juni</div>
                   </div>
                   <span class="info-card-chevron">›</span>
                 </div>
@@ -3182,6 +3301,13 @@
   }
 
   // ───── Tab + Pager wiring ─────
+  // Kuratierte „Alle"-Ansicht: „Alle ansehen →" springt zum jeweiligen Kanal-Tab
+  function jumpToCat(el, cat) {
+    const scope = el.closest('.section-container') || el.closest('.page');
+    const tab = scope && scope.querySelector('.tab[data-cat="' + cat + '"]');
+    if (tab) tab.click();
+  }
+
   function selectTab(btn, cat, label) {
     // v4.1: Region nutzt .region-filter-bar / .region-tab, sonst .tabs-wrapper / .tab
     const wrapper = btn.closest('.tabs-wrapper, .region-filter-bar');
