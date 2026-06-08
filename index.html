@@ -651,6 +651,12 @@
   .ort-facts-list { display:flex; flex-direction:column; gap:13px; }
   .ort-fact { display:flex; gap:11px; align-items:center; font-size:13px; color:#2a2a2a; line-height:1.38; }
   .ort-fact-ico { flex-shrink:0; width:32px; height:32px; border-radius:10px; background:var(--mint-soft); display:flex; align-items:center; justify-content:center; font-size:16px; }
+  .ort-facts-divider { height:1px; background:var(--line); margin:17px 0; }
+  .ort-chips { display:flex; flex-wrap:wrap; gap:8px; }
+  .ort-chip { font-size:12.5px; font-weight:600; color:var(--navy); background:var(--mint-soft); border-radius:20px; padding:7px 13px; display:flex; align-items:center; }
+  .ort-chip em { font-style:normal; font-weight:700; font-size:9px; letter-spacing:0.4px; text-transform:uppercase; opacity:0.6; margin-left:6px; }
+  .ort-chip--main { background:var(--navy); color:#fff; }
+  .ort-chip--main em { opacity:0.8; }
 
   /* Gruppen-Label für Info-Listen */
   .info-group-label { font-size:11px; font-weight:700; color:var(--navy); text-transform:uppercase; letter-spacing:0.6px; opacity:0.5; margin:4px 2px 10px; }
@@ -1975,6 +1981,12 @@
                       <div class="ort-fact"><span class="ort-fact-ico">🏰</span><span>Schloss Ismaning mit barockem Schlosspark</span></div>
                       <div class="ort-fact"><span class="ort-fact-ico">♨️</span><span>Klimaneutrale Fernwärme aus eigener Geothermie</span></div>
                       <div class="ort-fact"><span class="ort-fact-ico">🦆</span><span>Ismaninger Speichersee – international bedeutendes Vogelschutzgebiet</span></div>
+                    </div>
+                    <div class="ort-facts-divider"></div>
+                    <div class="ort-facts-label">Ortsteile</div>
+                    <div class="ort-chips">
+                      <span class="ort-chip ort-chip--main">Ismaning<em>Hauptort</em></span>
+                      <span class="ort-chip">Fischerhäuser</span>
                     </div>
                   </div>
                 </div>
