@@ -625,17 +625,36 @@
   }
 
   /* ── Gemeinde-Fakten (Infos → Kommune) ── */
-  .ort-facts { background:#fff; border-radius:14px; margin:0 16px 12px; padding:14px 16px 16px; box-shadow:0 1px 3px rgba(0,0,0,0.06); }
-  .ort-facts-head { margin-bottom:12px; }
-  .ort-facts-name { font-size:18px; font-weight:700; color:var(--navy); }
-  .ort-facts-sub { font-size:11.5px; color:var(--muted); margin-top:1px; }
-  .ort-facts-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin-bottom:14px; }
-  .ort-stat { background:var(--mint-soft); border-radius:10px; padding:9px 3px; text-align:center; }
-  .ort-stat-val { font-size:13px; font-weight:700; color:var(--navy); line-height:1.1; white-space:nowrap; }
-  .ort-stat-lbl { font-size:9px; color:var(--muted); margin-top:3px; font-weight:600; }
-  .ort-facts-list { display:flex; flex-direction:column; gap:9px; }
-  .ort-fact { display:flex; gap:8px; align-items:flex-start; font-size:12.5px; color:#2a2a2a; line-height:1.35; }
-  .ort-fact span { flex-shrink:0; }
+  .ort-facts { background:#fff; border-radius:18px; margin:0 0 18px; box-shadow:0 6px 22px rgba(26,58,92,0.12); overflow:hidden; }
+  .ort-facts-banner {
+    background:linear-gradient(135deg,#1a3a5c 0%,#2f6b6e 62%,#3a8a78 100%);
+    padding:17px 18px 34px; color:#fff;
+    display:flex; align-items:center; gap:13px;
+  }
+  .ort-wappen {
+    width:48px; height:48px; border-radius:15px; flex-shrink:0;
+    background:rgba(255,255,255,0.16);
+    border:1px solid rgba(255,255,255,0.28);
+    display:flex; align-items:center; justify-content:center; font-size:25px;
+  }
+  .ort-facts-name { font-size:21px; font-weight:700; letter-spacing:0.2px; line-height:1.05; }
+  .ort-facts-sub { font-size:12px; opacity:0.88; margin-top:4px; display:flex; align-items:center; gap:5px; }
+  .ort-facts-sub svg { width:12px; height:12px; }
+  /* Stat-Kacheln überlappen den Hero leicht (Best Practice: Stat-Overlap) */
+  .ort-facts-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:7px; padding:0 13px; margin-top:-22px; position:relative; }
+  .ort-stat { background:#fff; border-radius:13px; padding:11px 3px 10px; text-align:center; box-shadow:0 3px 10px rgba(26,58,92,0.10); }
+  .ort-stat-val { font-size:14px; font-weight:700; color:var(--navy); line-height:1.05; white-space:nowrap; }
+  .ort-stat-lbl { font-size:8.5px; color:var(--muted); margin-top:4px; font-weight:700; text-transform:uppercase; letter-spacing:0.4px; }
+  /* Besonderheiten */
+  .ort-facts-section { padding:17px 18px 19px; }
+  .ort-facts-label { font-size:10.5px; font-weight:700; color:var(--navy); text-transform:uppercase; letter-spacing:0.8px; opacity:0.6; margin-bottom:13px; }
+  .ort-facts-list { display:flex; flex-direction:column; gap:13px; }
+  .ort-fact { display:flex; gap:11px; align-items:center; font-size:13px; color:#2a2a2a; line-height:1.38; }
+  .ort-fact-ico { flex-shrink:0; width:32px; height:32px; border-radius:10px; background:var(--mint-soft); display:flex; align-items:center; justify-content:center; font-size:16px; }
+
+  /* Gruppen-Label für Info-Listen */
+  .info-group-label { font-size:11px; font-weight:700; color:var(--navy); text-transform:uppercase; letter-spacing:0.6px; opacity:0.5; margin:4px 2px 10px; }
+  .info-group-label + .info-card, .info-card + .info-group-label { margin-top:0; }
 
   /* ── Funkzentrale „Alle": kuratierte Kanal-Übersicht ── */
   .curated-feed { padding:4px 0 0; }
@@ -1936,23 +1955,30 @@
               <!-- ── Infos zur Kommune ── -->
               <div class="feed-panel" data-cat="infos-kommune">
                 <div class="ort-facts">
-                  <div class="ort-facts-head">
-                    <div class="ort-facts-name">Ismaning</div>
-                    <div class="ort-facts-sub">Landkreis München · Oberbayern</div>
+                  <div class="ort-facts-banner">
+                    <div class="ort-wappen">🛡️</div>
+                    <div>
+                      <div class="ort-facts-name">Ismaning</div>
+                      <div class="ort-facts-sub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Landkreis München · Oberbayern</div>
+                    </div>
                   </div>
                   <div class="ort-facts-grid">
                     <div class="ort-stat"><div class="ort-stat-val">17.600</div><div class="ort-stat-lbl">Einwohner</div></div>
                     <div class="ort-stat"><div class="ort-stat-val">23,8 km²</div><div class="ort-stat-lbl">Fläche</div></div>
-                    <div class="ort-stat"><div class="ort-stat-val">490 m</div><div class="ort-stat-lbl">Höhe ü. NHN</div></div>
+                    <div class="ort-stat"><div class="ort-stat-val">490 m</div><div class="ort-stat-lbl">Höhe</div></div>
                     <div class="ort-stat"><div class="ort-stat-val">85737</div><div class="ort-stat-lbl">PLZ</div></div>
                   </div>
-                  <div class="ort-facts-list">
-                    <div class="ort-fact"><span>🏛️</span> Über 1.000 Jahre im Besitz der Freisinger Fürstbischöfe</div>
-                    <div class="ort-fact"><span>🏰</span> Schloss Ismaning mit barockem Schlosspark</div>
-                    <div class="ort-fact"><span>♨️</span> Klimaneutrale Fernwärme aus eigener Geothermie</div>
-                    <div class="ort-fact"><span>🦆</span> Ismaninger Speichersee – international bedeutendes Vogelschutzgebiet</div>
+                  <div class="ort-facts-section">
+                    <div class="ort-facts-label">Besonderheiten</div>
+                    <div class="ort-facts-list">
+                      <div class="ort-fact"><span class="ort-fact-ico">🏛️</span><span>Über 1.000 Jahre im Besitz der Freisinger Fürstbischöfe</span></div>
+                      <div class="ort-fact"><span class="ort-fact-ico">🏰</span><span>Schloss Ismaning mit barockem Schlosspark</span></div>
+                      <div class="ort-fact"><span class="ort-fact-ico">♨️</span><span>Klimaneutrale Fernwärme aus eigener Geothermie</span></div>
+                      <div class="ort-fact"><span class="ort-fact-ico">🦆</span><span>Ismaninger Speichersee – international bedeutendes Vogelschutzgebiet</span></div>
+                    </div>
                   </div>
                 </div>
+                <div class="info-group-label">Verwaltung</div>
                 <div class="info-card" onclick="showToast('Rathaus öffnen')">
                   <div class="info-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg></div>
                   <div class="info-card-body">
@@ -1977,6 +2003,7 @@
                   </div>
                   <span class="info-card-chevron">›</span>
                 </div>
+                <div class="info-group-label">Service &amp; Notfall</div>
                 <div class="info-card" onclick="showToast('Mängelmelder')">
                   <div class="info-card-icon" style="background:linear-gradient(135deg,#e8966a,#c8786a);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
                   <div class="info-card-body">
