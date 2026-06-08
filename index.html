@@ -1196,6 +1196,26 @@
   .nav-indicator { width: 28px; height: 3px; border-radius: 2px; background: transparent; margin-top: 2px; }
   .nav-item.active .nav-indicator { background: var(--orange); }
 
+  /* ── Kern-Tabs hervorheben: Mein Ort & Meine Region ── */
+  .nav-core {
+    flex: 2.1;
+    display: flex; align-items: flex-start;
+    background: #e8f6ef;
+    border: 1px solid #d6ece1;
+    border-radius: 20px;
+    margin: -4px 6px 0;
+    padding: 5px 0 7px;
+    box-shadow: 0 1px 4px rgba(26,58,92,0.05);
+  }
+  .nav-core .nav-item { padding-top: 3px; }
+  .nav-ico { position: relative; display: inline-flex; }
+  .nav-dot {
+    position: absolute; top: -1px; right: -4px;
+    width: 9px; height: 9px; border-radius: 50%;
+    background: #f0524a;
+    border: 2px solid #e8f6ef;
+  }
+
   /* ── Toast ── */
   .toast {
     position: absolute; left: 50%; bottom: 110px;
@@ -3252,16 +3272,18 @@
           <span>Start</span>
           <div class="nav-indicator"></div>
         </button>
-        <button class="nav-item" data-page="mein-ort" onclick="switchPage('mein-ort')">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <span>Mein Ort</span>
-          <div class="nav-indicator"></div>
-        </button>
-        <button class="nav-item" data-page="region" onclick="switchPage('region')">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15 15 0 010 20"/></svg>
-          <span>Meine&nbsp;Region</span>
-          <div class="nav-indicator"></div>
-        </button>
+        <div class="nav-core">
+          <button class="nav-item" data-page="mein-ort" onclick="switchPage('mein-ort')">
+            <span class="nav-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span class="nav-dot"></span></span>
+            <span>Mein Ort</span>
+            <div class="nav-indicator"></div>
+          </button>
+          <button class="nav-item" data-page="region" onclick="switchPage('region')">
+            <span class="nav-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15 15 0 010 20"/></svg><span class="nav-dot"></span></span>
+            <span>Meine&nbsp;Region</span>
+            <div class="nav-indicator"></div>
+          </button>
+        </div>
         <button class="nav-item" data-page="profil" onclick="switchPage('profil')">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
           <span>Profil</span>
