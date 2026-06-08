@@ -1148,7 +1148,7 @@
 <div class="stage">
   <div class="stage-label">
     StadtLand.Funk v4.2
-    <span class="pattern">Radius-Editor (Umkreis bis 20 km) · „Meine Region" · Markt-Filter Suche/Biete/Händler · „+" nur im Gemeindeleben</span>
+    <span class="pattern">Radius-Editor (Umkreis bis 20 km) · „Meine Region" · Markt-Filter Suche/Biete/Händler · „+" nur in der Funkzentrale</span>
   </div>
 
   <div class="iphone-frame">
@@ -1354,14 +1354,14 @@
           <!-- ═══════ Primary Tabs: 3 Hauptkategorien ═══════ -->
           <div class="primary-tabs-wrapper">
             <div class="primary-tab-strip">
-              <button class="primary-tab active" data-section="leben" onclick="selectPrimary(this,'leben')">Gemeindeleben</button>
+              <button class="primary-tab active" data-section="leben" onclick="selectPrimary(this,'leben')">Funkzentrale</button>
               <button class="primary-tab" data-section="gruppen" onclick="selectPrimary(this,'gruppen')">Chats</button>
               <button class="primary-tab" data-section="infos" onclick="selectPrimary(this,'infos')">Gemeindeinfos</button>
             </div>
           </div>
 
           <!-- ═══════════════════════════════════════════════ -->
-          <!-- ABSCHNITT 1: Gemeindeleben (Funkzentrale)      -->
+          <!-- ABSCHNITT 1: Funkzentrale      -->
           <!-- ═══════════════════════════════════════════════ -->
           <div class="section-container active" data-section="leben">
             <div class="tabs-wrapper">
@@ -2837,17 +2837,17 @@
           <div class="sheet-cat" id="ort-cat-leben">
             <div class="sheet-cat-head" onclick="toggleExpand('ort-cat-leben')">
               <div class="sheet-cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
-              <div><div class="sheet-cat-title">Gemeindeleben</div><div class="sheet-cat-count">6 Themen · 47 Beiträge</div></div>
+              <div><div class="sheet-cat-title">Funkzentrale</div><div class="sheet-cat-count">6 Themen · 47 Beiträge</div></div>
               <span style="flex:1"></span>
               <svg class="sheet-cat-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
             </div>
             <div class="sheet-subs">
-              <div class="sheet-sub" onclick="pickFromSheet('Gemeindeleben · Freizeit','ort')">Freizeit</div>
-              <div class="sheet-sub" onclick="pickFromSheet('Gemeindeleben · Ehrenamt','ort')">Ehrenamt <span class="sheet-sub-badge">2</span></div>
-              <div class="sheet-sub" onclick="pickFromSheet('Gemeindeleben · Schule','ort')">Schule</div>
-              <div class="sheet-sub" onclick="pickFromSheet('Gemeindeleben · Kita','ort')">Kita</div>
-              <div class="sheet-sub" onclick="pickFromSheet('Gemeindeleben · Kirche','ort')">Kirche</div>
-              <div class="sheet-sub" onclick="pickFromSheet('Gemeindeleben · Empfehlungen','ort')">Empfehlungen</div>
+              <div class="sheet-sub" onclick="pickFromSheet('Funkzentrale · Freizeit','ort')">Freizeit</div>
+              <div class="sheet-sub" onclick="pickFromSheet('Funkzentrale · Ehrenamt','ort')">Ehrenamt <span class="sheet-sub-badge">2</span></div>
+              <div class="sheet-sub" onclick="pickFromSheet('Funkzentrale · Schule','ort')">Schule</div>
+              <div class="sheet-sub" onclick="pickFromSheet('Funkzentrale · Kita','ort')">Kita</div>
+              <div class="sheet-sub" onclick="pickFromSheet('Funkzentrale · Kirche','ort')">Kirche</div>
+              <div class="sheet-sub" onclick="pickFromSheet('Funkzentrale · Empfehlungen','ort')">Empfehlungen</div>
             </div>
           </div>
 
@@ -3150,7 +3150,7 @@
     page.querySelectorAll('.section-container').forEach(s => {
       s.classList.toggle('active', s.dataset.section === section);
     });
-    // "+" (Beitrag erstellen) nur im Gemeindeleben anzeigen
+    // "+" (Beitrag erstellen) nur in der Funkzentrale anzeigen
     const fab = document.getElementById('fab-leben');
     if (fab) fab.style.display = (section === 'leben') ? '' : 'none';
   }
